@@ -1,0 +1,397 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #F4C430;
+    --purple: #5E3A9E;
+    --dark: #0F081A;
+    --section: #1E1530;
+    --navbar: #150B27;
+    --gold: #C7921B;
+    --text: #FFFFFF;
+    --muted: #C9C3D4;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Alexandria", "Tahoma", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(94, 58, 158, 0.25),
+            transparent 45%
+        ),
+        var(--dark);
+
+    color: var(--text);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.game-container {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--section);
+
+    color: var(--dark);
+
+    border-radius: 15px;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 5px 20px rgba(244, 196, 48, 0.2);
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.brand {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.game-name {
+    font-size: 13px;
+    color: var(--muted);
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   Progress
+========================= */
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+
+    background: #2A203B;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    width: 14.28%;
+
+    background: var(--yellow);
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================
+   Station Card
+========================= */
+
+.station-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(94, 58, 158, 0.15),
+            rgba(30, 21, 48, 0.95)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 24px;
+
+    padding: 30px 23px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+
+    animation: appear 0.5s ease;
+}
+
+
+/* =========================
+   Station Number
+========================= */
+
+.station-number {
+    display: inline-block;
+
+    background: rgba(244, 196, 48, 0.12);
+
+    color: var(--yellow);
+
+    border: 1px solid rgba(244, 196, 48, 0.3);
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+h1 {
+    font-size: 30px;
+
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Intro
+========================= */
+
+.intro {
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    white-space: pre-line;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   Riddle
+========================= */
+
+.riddle-box {
+    background: var(--navbar);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    border-right: 4px solid var(--yellow);
+
+    position: relative;
+}
+
+.riddle-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--yellow);
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.riddle {
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    white-space: pre-line;
+}
+
+
+/* =========================
+   Final Station
+========================= */
+
+.final-box {
+    display: none;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 196, 48, 0.12),
+            rgba(94, 58, 158, 0.18)
+        );
+
+    border: 1px solid rgba(244, 196, 48, 0.25);
+
+    border-radius: 18px;
+
+    padding: 30px 20px;
+
+    margin-top: 25px;
+}
+
+.final-icon {
+    font-size: 45px;
+}
+
+.final-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.final-box p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: var(--yellow);
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+footer p {
+    color: var(--yellow);
+
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+span a {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   Small Screens
+========================= */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 14px;
+    }
+
+    .station-card {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .riddle {
+        font-size: 16px;
+    }
+
+}
